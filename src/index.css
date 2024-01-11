@@ -1,3 +1,12 @@
+@import "./variables.css";
+@import url('https://fonts.googleapis.com/css2?family=Single+Day&display=swap');
+
+:root {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
 * {
   margin: 0;
   padding: 0;
