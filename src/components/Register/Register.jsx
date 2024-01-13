@@ -4,6 +4,8 @@ import styles from "./Register.module.css";
 import Button from "../Button/Button";
 import toast, { Toaster } from "react-hot-toast";
 
+import Banner from "/assets/images/banner.png"
+
 const Register = () => {
   const navigate = useNavigate();
 
@@ -61,6 +63,7 @@ const Register = () => {
         ...error,
         userName: "UserName Field is Required !",
       });
+      console.log(error)
       userName.current.style.border = "1px solid #F00";
       isValid = false;
     }
@@ -123,14 +126,14 @@ const Register = () => {
       <Toaster position="top-right" reverseOrder={false} />
       <div className={styles.container}>
         <div className={styles.register_banner}>
-          <img src="/assets/images/banner.png" alt="banner" />
+          <img src={Banner} alt="banner" />
           <h2 className={styles.register_banner_title}>
             Discover new things on SuperApp
           </h2>
         </div>
         <div className={styles.form_container}>
           <div className={styles.form_header}>Super App</div>
-          <p className={styles.form_header_two}>Create your new accout</p>
+          <p className={styles.form_header_two}>Create your new account</p>
           <form>
             <input
               type="text"
@@ -142,9 +145,7 @@ const Register = () => {
             />
             {error.name ? (
               <p className={styles.error_text}>{error.name}</p>
-            ) : (
-              <></>
-            )}
+            ): <></> }
             <input
               type="text"
               name="userName"
@@ -165,6 +166,7 @@ const Register = () => {
               className={styles.form_input_email}
               onChange={handleChange}
               ref={email}
+              required
             />
             {error.name ? (
               <p className={styles.error_text}>{error.email}</p>
@@ -197,7 +199,7 @@ const Register = () => {
               />
 
               <p className={styles.form_isAgreed_text}>
-                Share my Registeration data with Superapp
+                Share my Registration data with Superapp
               </p>
             </div>
 
@@ -205,6 +207,7 @@ const Register = () => {
               onClick={(e) => {
                 handleSubmit(e);
               }}
+              name='Sign Up'
             />
           </form>
           <div className={styles.footer}>
