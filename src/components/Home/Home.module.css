@@ -1,0 +1,9 @@
+.home{
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    background: var(--color-accent);
+    padding: 5rem;
+    overflow:hidden;
+    box-sizing: border-box;
+}

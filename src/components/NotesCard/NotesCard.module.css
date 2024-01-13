@@ -1,0 +1,22 @@
+.container {
+  position: relative;
+  margin: 0rem 0 2rem 3rem;
+}
+.notes_area {
+  height: 20rem;
+  width: 20rem;
+  border-radius: 1.8rem;
+  outline: none;
+  border: none;
+  background: #f1c75b;
+  resize: none;
+  padding: 4.5rem 0 0 2rem;
+}
+
+.heading {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  color: #000;
+  z-index: 1;
+}

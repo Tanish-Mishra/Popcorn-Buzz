@@ -48,14 +48,13 @@ const Register = () => {
     removeErrorStyles();
     e.preventDefault();
     let isValid = true;
-
+    console.log(error)
     if (!formData.name.trim().length) {
       setError({
         ...error,
         name: "Name Field is Required !",
       });
       name.current.style.border = "1px solid #F00";
-      console.log("hello", error);
       isValid = false;
     }
     if (!formData.userName.trim().length) {
@@ -63,7 +62,6 @@ const Register = () => {
         ...error,
         userName: "UserName Field is Required !",
       });
-      console.log(error)
       userName.current.style.border = "1px solid #F00";
       isValid = false;
     }
@@ -103,7 +101,7 @@ const Register = () => {
     }
 
     if (isValid) {
-      localStorage.setItem("userData", formData);
+      localStorage.setItem("userData", JSON.stringify(formData));
       navigate("/genre");
     }
   };
