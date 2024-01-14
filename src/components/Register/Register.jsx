@@ -4,7 +4,7 @@ import styles from "./Register.module.css";
 import Button from "../Button/Button";
 import toast, { Toaster } from "react-hot-toast";
 
-import Banner from "/assets/images/banner.png"
+import Banner from "/assets/images/banner.png";
 
 const Register = () => {
   const navigate = useNavigate();
@@ -47,36 +47,53 @@ const Register = () => {
   const handleSubmit = (e) => {
     removeErrorStyles();
     e.preventDefault();
+    setError((prev) => {
+      return {
+        ...prev,
+        name: "",
+        userName: "",
+        email: "",
+        mobile: "",
+        isAgreed: "",
+      };
+    });
     let isValid = true;
-    console.log(error)
     if (!formData.name.trim().length) {
-      setError({
-        ...error,
-        name: "Name Field is Required !",
+      setError((prev) => {
+        return {
+          ...prev,
+          name: "Name Field is Required !",
+        };
       });
       name.current.style.border = "1px solid #F00";
       isValid = false;
     }
     if (!formData.userName.trim().length) {
-      setError({
-        ...error,
-        userName: "UserName Field is Required !",
+      setError((prev) => {
+        return {
+          ...prev,
+          userName: "UserName Field is Required !",
+        };
       });
       userName.current.style.border = "1px solid #F00";
       isValid = false;
     }
     if (!formData.email.trim().length) {
-      setError({
-        ...error,
-        email: "Email Field is Required !",
+      setError((prev) => {
+        return {
+          ...prev,
+          email: "Email Field is Required !",
+        };
       });
       email.current.style.border = "1px solid #F00";
       isValid = false;
     }
     if (!formData.mobile.trim().length) {
-      setError({
-        ...error,
-        mobile: "Mobile Number Field is Required !",
+      setError((prev) => {
+        return {
+          ...prev,
+          mobile: "Mobile Number Field is Required !",
+        };
       });
       mobile.current.style.border = "1px solid #F00";
       isValid = false;
@@ -93,9 +110,11 @@ const Register = () => {
           secondary: "#FFFAEE",
         },
       });
-      setError({
-        ...error,
-        isAgreed: "Please Check The Box !",
+      setError((prev) => {
+        return {
+          ...prev,
+          isAgreed: "Please Check The Box !",
+        };
       });
       isValid = false;
     }
@@ -143,7 +162,9 @@ const Register = () => {
             />
             {error.name ? (
               <p className={styles.error_text}>{error.name}</p>
-            ): <></> }
+            ) : (
+              <></>
+            )}
             <input
               type="text"
               name="userName"
@@ -152,7 +173,7 @@ const Register = () => {
               onChange={handleChange}
               ref={userName}
             />
-            {error.name ? (
+            {error.userName ? (
               <p className={styles.error_text}>{error.userName}</p>
             ) : (
               <></>
@@ -166,7 +187,7 @@ const Register = () => {
               ref={email}
               required
             />
-            {error.name ? (
+            {error.email ? (
               <p className={styles.error_text}>{error.email}</p>
             ) : (
               <></>
@@ -179,7 +200,7 @@ const Register = () => {
               onChange={handleChange}
               ref={mobile}
             />
-            {error.name ? (
+            {error.mobile ? (
               <p className={styles.error_text}>{error.mobile}</p>
             ) : (
               <></>
@@ -205,7 +226,7 @@ const Register = () => {
               onClick={(e) => {
                 handleSubmit(e);
               }}
-              name='Sign Up'
+              name="Sign Up"
             />
           </form>
           <div className={styles.footer}>
