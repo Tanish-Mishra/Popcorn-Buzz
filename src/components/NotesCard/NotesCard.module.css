@@ -11,6 +11,8 @@
   background: #f1c75b;
   resize: none;
   padding: 4.5rem 0 0 2rem;
+  overflow: scroll;
+  scrollbar-width: none;
 }
 
 .heading {
