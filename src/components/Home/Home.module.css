@@ -13,3 +13,8 @@
     width: fit-content;
     /* border: 1px solid red; */
 }
+
+.home_heading{
+    display: flex;
+    flex-direction: column;
+}

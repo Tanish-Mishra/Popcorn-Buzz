@@ -4,7 +4,6 @@
     width: 100%;
     height: 100%;
     width: 20rem;
-    /* border-radius: 1rem; */
 }
 .card__image {
     position: relative;
@@ -12,7 +11,7 @@
 }
 
 .card__image img {
-    border-radius: 1rem;
+  border-radius: 1rem 1rem 0 0;
 }
 .card__news_heading{
     width: 90%;

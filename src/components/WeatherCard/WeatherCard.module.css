@@ -1,0 +1,74 @@
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    width: 28rem;
+    margin: var(--margin-medium-s) 0 0 0;
+    border-radius: 1rem;
+    color: #fff;
+}
+
+.card__header {
+    display: flex;
+    height: 2.4rem;
+    border-radius: 1rem 1rem 0 0;
+    align-items: center;
+    color: #fff;
+    background: #FF4ADE;
+    font-size: var(--font-small-s);
+    flex-direction: row;
+    justify-content: center;
+}
+.card__details {
+    display: flex;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    background: #101744;
+    border-radius: 0 0 1rem 1rem;
+    justify-content: space-around;
+}
+.card__details_pipe {
+ background: #fff;
+ height: 2.5rem;
+ width: 0.1rem;
+}
+
+.card__details_data {
+    font-size: var(--font-small-s);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card__details_data * {
+    padding: 0.3rem;
+}
+
+.card__details_pressure{
+    display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.card__details_pressure img {
+      height: 1rem;
+      width: 0.5rem;
+}
+.card__details_windspeed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card__details_humidity{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.card__details_humidity img {
+    height: 1rem;
+    width: 0.7rem;
+    padding-bottom: 0.5rem;
+}
