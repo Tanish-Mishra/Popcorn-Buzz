@@ -9,7 +9,7 @@ export const getNewsDetails = async () => {
     const response = await axios.get(requiredUrl);
     return response.data.articles[number];
   } catch (error) {
-    toast.success("News! Something Went Wrong !", {
+    toast.error("News! Something Went Wrong !", {
       style: {
         border: "1px solid #713200",
         padding: "16px",

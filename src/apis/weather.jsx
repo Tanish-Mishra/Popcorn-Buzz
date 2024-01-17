@@ -10,7 +10,7 @@ export const getWeatherDetails = async () => {
      return response.data;
   } catch (error) {
     console.log(error)
-    toast.success("Weather! Something Went Wrong !", {
+    toast.error("Weather! Something Went Wrong !", {
         style: {
           border: "1px solid #713200",
           padding: "16px",
