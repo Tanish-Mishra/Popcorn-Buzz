@@ -1,0 +1,30 @@
+.container {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    padding: 0 0 0.8rem 0;
+    overflow: hidden;
+}
+.container__header {
+    line-height: 2.5rem;
+    font-size: var(--font-small);
+    color: #878787; 
+}
+.container__moviecard {
+  width: fit-content;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+
+.container__movies img{
+    height: 12rem;
+    width: 21rem;
+    border-radius: 0.8rem;
+    margin: 0 2rem 0 0;
+}
+
+.container__movies {
+    display: flex; 
+    width: 165%;
+    flex-wrap: nowrap;
+}

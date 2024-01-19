@@ -1,0 +1,36 @@
+.container {
+    height: 100vh;
+    background: var(--color-accent);
+    overflow-y: scroll;
+    scrollbar-width: none;
+}
+.header {
+    display: flex;
+    color: red;
+    justify-content: space-between;
+    padding: 1.5rem 3rem 1rem 2rem;
+}
+.header__text {
+    font-size: var(--font-medium-large);
+    font-family: "Single Day", normal;
+    font-weight: 500;
+    font-style: normal;
+    color: var(--color-accent-2);
+}
+.container__moviecard {
+    display: flex;
+    flex-direction: column;
+    /* height: 100vh; */
+    padding: 0 0 0rem 4rem;
+}
+.container__moviecard_header {
+    color: #fff;
+    font-size: var(--font-medium-sm);
+    margin-bottom: var(--margin-small);
+}
+.header__profile_img {
+  cursor:pointer;
+}
+.header__profile_img:hover {
+  scale: 1.1;
+}
