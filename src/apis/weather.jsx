@@ -5,7 +5,7 @@ import axios from 'axios';
 export const getWeatherDetails = async () => {
   const DEFAULT_LOCATION = "lucknow";
   try {
-     const reqUrl = `http://api.weatherapi.com/v1/current.json?q=${DEFAULT_LOCATION}&key=${process.env.VITE_WEATHER_API_KEY}`
+     const reqUrl = `http://api.weatherapi.com/v1/current.json?q=${DEFAULT_LOCATION}&key=${import.meta.env.VITE_WEATHER_API_KEY}`
      const response = await axios.get(reqUrl);
      return response.data;
   } catch (error) {
