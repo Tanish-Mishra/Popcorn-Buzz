@@ -67,6 +67,15 @@ const Register = () => {
       });
       name.current.style.border = "1px solid #F00";
       isValid = false;
+    } else if (!/^[a-zA-Z\s]+$/.test(formData.name)) {
+      setError((prev) => {
+        return {
+          ...prev,
+          name: "Name should contain only letters and spaces !",
+        };
+      });
+      name.current.style.border = "1px solid #F00";
+      isValid = false;
     }
     if (!formData.userName.trim().length) {
       setError((prev) => {
@@ -77,7 +86,17 @@ const Register = () => {
       });
       userName.current.style.border = "1px solid #F00";
       isValid = false;
+    } else if (!/^[a-zA-Z0-9]+$/.test(formData.userName)) {
+      setError((prev) => {
+        return {
+          ...prev,
+          userName: "Username should contain only letters and numbers !",
+        };
+      });
+      userName.current.style.border = "1px solid #F00";
+      isValid = false;
     }
+
     if (!formData.email.trim().length) {
       setError((prev) => {
         return {
@@ -87,7 +106,17 @@ const Register = () => {
       });
       email.current.style.border = "1px solid #F00";
       isValid = false;
+    } else if (!/^\S+@\S+\.\S+$/.test(formData.email)) {
+      setError((prev) => {
+        return {
+          ...prev,
+          email: "Email is not valid !",
+        };
+      });
+      email.current.style.border = "1px solid #F00";
+      isValid = false;
     }
+
     if (!formData.mobile.trim().length) {
       setError((prev) => {
         return {
@@ -97,7 +126,17 @@ const Register = () => {
       });
       mobile.current.style.border = "1px solid #F00";
       isValid = false;
+    } else if (!/^[1-9]\d{9}$/.test(formData.mobile)) {
+      setError((prev) => {
+        return {
+          ...prev,
+          mobile: "Mobile number should be a 10-digit number starting with a non-zero digit !",
+        };
+      });
+      mobile.current.style.border = "1px solid #F00";
+      isValid = false;
     }
+
     if (!formData.isAgreed) {
       toast.error("Kindly Check The Box!", {
         style: {
