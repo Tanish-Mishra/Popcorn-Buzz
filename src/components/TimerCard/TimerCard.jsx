@@ -50,8 +50,9 @@ const TimerCard = () => {
   },[seconds,minutes,hours])
   return (
     <div className={styles.container}>
-      <div>
+      <div className={styles.timer_container}>
       <CountdownCircleTimer
+    size={119}
     isPlaying={isTimerStart}
     duration={timeInSeconds}
     colors={['#004777', '#F7B801', '#A30000', '#A30000']}

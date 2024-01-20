@@ -7,16 +7,9 @@ import { getMoviesDetails } from '../../apis/movies'
 import Profile from '/assets/icons/profile.png'
 
 const Movies = () => {
-    const [movie,setMovie] = useState([])
-
-    const movieDetails = async () => {
-    const result = await getMoviesDetails()
-    setMovie(result.Search)
-    }
-    useEffect(()=>{
-          movieDetails()
-     },[])
-
+    // useEffect(()=>{
+    //       movieDetails()
+    //  },[])
     const userGenre = localStorage.getItem('category')
     let genreDetails = []
     if(genreDetails){
@@ -33,14 +26,15 @@ const Movies = () => {
     </div>
     <div className={styles.container__moviecard}>
     <h3 className={styles.container__moviecard_header}>Entertainment according to your choice</h3>
-    {genreDetails.map((genre)=> {
+    { 
+    genreDetails.map((genre)=> {
         return (
-            <Card genreDetail={genre} movieDetail={movie} key={genre}/>
+            <Card genreDetail={genre} key={genre}/>
         )
-    }) }
+    })}
     </div>
     </div>
   )
-}
+  }
 
 export default Movies

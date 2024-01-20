@@ -1,9 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import axios from 'axios'
 import toast, { Toaster } from 'react-hot-toast';
-export const getMoviesDetails = async () => {
+export const getMoviesDetails = async (genreInfo) => {
   try {
-    const response = await axios.get(`http://www.omdbapi.com/?&apikey=${import.meta.env.VITE_MOVIE_API_KEY}&s=action`)
+    const response = await axios.get(`http://www.omdbapi.com/?&apikey=${import.meta.env.VITE_MOVIE_API_KEY}&s=${genreInfo}`)
     return response.data
   } catch (error) {
     toast.error("Movies! Something Went Wrong !", {
