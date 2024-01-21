@@ -2,6 +2,7 @@ import React, { useEffect,useState } from 'react'
 import toast, { Toaster } from 'react-hot-toast';
 import { getWeatherDetails } from '../../apis/weather';
 import styles from './WeatherCard.module.css'
+import LoadingSpin from "react-loading-spin";
 
 import windSpeed from '/assets/icons/wind_speed.svg'
 import pressure from '/assets/icons/pressure.svg'
@@ -10,15 +11,16 @@ import humidity from '/assets/icons/humidity.svg'
 const WeatherCard = () => {
     const [date,setDate] = useState()
     const [weather,setWeather] = useState([])
+    const [isData,setIsData]= useState(false)
      useEffect(()=> {
         weatherDetails()
      },[])
     const weatherDetails = async () => {
-        const result = await getWeatherDetails()
+         const result = await getWeatherDetails()
          setDate(result.location.localtime)
          setWeather(result.current)
-
     }
+if(date && weather){
   return (
     <div className={styles.card}>
          <Toaster position="top-right" reverseOrder={false} />
@@ -42,7 +44,21 @@ const WeatherCard = () => {
             </div>
         </div>
     </div>
-  )
+  )   }
+ else {
+    return (
+        <div className={styles.loader}>
+             <LoadingSpin 
+              duration="2s"
+              width="8px"
+              timingFunction="ease-in-out"
+              direction="alternate"
+              primaryColor="#000"
+              secondaryColor="#72DB73"
+             />
+        </div>
+    )
+}
 }
 
 export default WeatherCard

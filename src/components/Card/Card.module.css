@@ -17,8 +17,10 @@
 }
 
 .container__movies img{
-    height: 12rem;
-    width: 21rem;
+    max-width: 22rem;
+    max-height: 12rem;
+    display: block;
+    margin: auto;
     border-radius: 0.8rem;
     margin: 0 2rem 0 0;
 }

@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import styles from "./NewsCard.module.css";
 import { getNewsDetails } from "../../apis/news";
 import toast, { Toaster } from "react-hot-toast";
+import LoadingSpin from "react-loading-spin";
 
 const NewsCard = () => {
   const [news, setNews] = useState([]);
@@ -14,6 +15,7 @@ const NewsCard = () => {
     const result = await getNewsDetails();
     setNews(result);
   };
+  if(news) {
   return (
     <div className={styles.card}>
       <Toaster position="top-right" reverseOrder={false} />
@@ -30,7 +32,20 @@ const NewsCard = () => {
         </p>
       </div>
     </div>
-  );
+  ); } else {
+  return (
+    <div className={styles.loader}>
+    <LoadingSpin 
+    duration="2s"
+    width="8px"
+    timingFunction="ease-in-out"
+    direction="alternate"
+    primaryColor="#000"
+    secondaryColor="#72DB73"
+    />
+    </div>
+  )
+  }
 };
 
 export default NewsCard;

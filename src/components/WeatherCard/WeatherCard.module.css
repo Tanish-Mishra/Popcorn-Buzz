@@ -72,3 +72,9 @@
     width: 0.7rem;
     padding-bottom: 0.5rem;
 }
+.loader {
+    display: flex;
+    height: 10rem;
+    justify-content: center;
+    align-items: center;
+}
