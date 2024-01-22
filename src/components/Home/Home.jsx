@@ -44,7 +44,6 @@ const Home = () => {
               height: "30px",
               background: "#148A08",
               color: "#fff",
-              borderRadius: "5px",
               border: "none",
               cursor: "pointer",
               fontSize: "15px",
