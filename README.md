@@ -1,9 +1,9 @@
-#  - Personalized Movie Recommendations App
+#  - Popcorn Buzz Movie Recommendation App
 
 Welcome to Popcorn Buzz, your personalized movie recommendations app that caters to your unique taste in films. Discover and enjoy tailored movie suggestions based on your preferences, and explore additional features to enhance your movie-watching experience.
 
-## Play Now
-Explore personalized movie recommendations on [Popcorn Buzz](https://moviepicks-react-app.com).
+## Visit Now
+Explore personalized movie recommendations on [Popcorn Buzz](https://popcorn-buzz.netlify.app).
 
 ## Features
 - **Registration Form**: Sign up and create your MoviePicks account to access personalized recommendations.
@@ -13,7 +13,7 @@ Explore personalized movie recommendations on [Popcorn Buzz](https://moviepicks-
 - **Timer**: Set a timer to remind you when your favorite movie is about to start.
 
 ## How to Use
-1. Visit [MoviePicks](https://moviepicks-react-app.com).
+1. Visit [MoviePicks](https://popcorn-buzz.netlify.app).
 2. Sign up and complete the registration form to access personalized recommendations.
 3. Select your favorite movie genres on the genre selection page.
 4. Explore your profile to find personalized movie recommendations, weather updates, and the latest news.
