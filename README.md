@@ -20,10 +20,10 @@ Explore personalized movie recommendations on [Popcorn Buzz](https://popcorn-buz
 5. Use the notes section to record your thoughts on movies, and set the timer for upcoming shows.
 
 ## Screenshots
-![App Screenshot - Registration Form](/assets/screenshots/register.png)
-![App Screenshot - Genre Selection Page](/assets/screenshots/genre.png)
-![App Screenshot - Home Component](/assets/screenshots/home.png)
-![App Screenshot - Movie Component](/assets/screenshots/movie.png)
+![App Screenshot - Registration Form](/public/assets/screenshots/register.png)
+![App Screenshot - Genre Selection Page](/public/assets/screenshots/genre.png)
+![App Screenshot - Home Component](/public/assets/screenshots/home.png)
+![App Screenshot - Movie Component](/public/assets/screenshots/movie.png)
 
 ## Technologies Used
 - **HTML**: Structuring the web page for a seamless user experience.
