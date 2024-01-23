@@ -7,13 +7,16 @@ import LoadingSpin from "react-loading-spin";
 
 const Card = (props) => {
   const [movie, setMovie] = useState([]);
+  const [isLoader,setIsLoader] = useState(false)
   const movieDetails = async (genreInfo) => {
     const result = await getMoviesDetails(genreInfo);
-    setMovie(result.Search);
+    setMovie(result?.Search);
   };
   useEffect(() => {
     movieDetails(props.genreDetail);
   }, []);
+
+  if (movie) {
   return (
     <div className={styles.container} key={props.key}>
       <Toaster position="top-right" reverseOrder={false} />
@@ -27,6 +30,20 @@ const Card = (props) => {
       </div>
     </div>
   ) 
+          } else {
+            return (
+            <div className={styles.loader}>
+             <LoadingSpin 
+              duration="2s"
+              width="8px"
+              timingFunction="ease-in-out"
+              direction="alternate"
+              primaryColor="#000"
+              secondaryColor="#72DB73"
+             />
+            </div>
+            )
+          }
 };
 
 export default Card;

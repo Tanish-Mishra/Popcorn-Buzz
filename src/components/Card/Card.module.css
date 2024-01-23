@@ -30,3 +30,11 @@
     width: 165%;
     flex-wrap: nowrap;
 }
+
+.loader {
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding: 2.3rem;
+   align-items: center;
+}
