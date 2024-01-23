@@ -11,10 +11,17 @@ import Profile from "/assets/icons/profile.png";
 const Movies = () => {
   const navigate = useNavigate();
   const userGenre = localStorage.getItem("category");
-  let genreDetails = [];
+  let genreDetails = userGenre;
   if (genreDetails) {
-    genreDetails = userGenre.split(",");
+    genreDetails = genreDetails?.split(",");
+  } else {
+    genreDetails = [];
   }
+  useEffect(()=>{
+    if (!userGenre) {
+      navigate("/register");
+    }
+  },[])
   return (
     <div className={styles.container}>
       <div className={styles.header}>
