@@ -3,13 +3,15 @@ import styles from "./TimerCard.module.css";
 import { CountdownCircleTimer } from 'react-countdown-circle-timer'
 import Up from "/assets/icons/up.svg";
 import Down from "/assets/icons/down.svg";
+
+import Bell from '/assets/audio/ting-tong.mp3'
 const TimerCard = () => {
   const [seconds,setSeconds] = useState(0)
   const [minutes,setMinutes] = useState(0)
   const [hours,setHours] = useState(0)
   const [isTimerStart, setIsTimerStart] = useState(false)
   const [timeInSeconds, setTimeInSeconds] = useState(0)
-
+  const bell = new Audio(Bell)
   const incrementSeconds = () => {
     if(seconds === 59){
       return
@@ -44,6 +46,9 @@ const TimerCard = () => {
     setHours((prev)=>(prev-1))
   }
 
+  function onComlete () {
+      bell.play()
+  }
   useEffect(() => {
      const secondCount = (seconds + minutes * 60 + hours * 60 * 60);
      setTimeInSeconds(secondCount)
@@ -55,6 +60,7 @@ const TimerCard = () => {
     size={119}
     isPlaying={isTimerStart}
     duration={timeInSeconds}
+    onComplete={onComlete}
     colors={['#004777', '#F7B801', '#A30000', '#A30000']}
     colorsTime={[7, 5, 2, 0]}
   >
