@@ -18,7 +18,7 @@ const Movies = () => {
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <div className={styles.header__text}>Super App</div>
+        <div className={styles.header__text}>Popcorn Buzz</div>
         <div className={styles.header__profile}>
           <Link to="/">
             {" "}

@@ -51,6 +51,7 @@ const TimerCard = () => {
       setHours(0)
       setSeconds(0)
       setMinutes(0)
+      setIsTimerStart(false)
   }
   useEffect(() => {
      const secondCount = (seconds + minutes * 60 + hours * 60 * 60);

@@ -184,11 +184,11 @@ const Register = () => {
         <div className={styles.register_banner}>
           <img src={Banner} alt="banner" />
           <h2 className={styles.register_banner_title}>
-            Discover new things on SuperApp
+            Discover new things on Popcorn Buzz
           </h2>
         </div>
         <div className={styles.form_container}>
-          <div className={styles.form_header}>Super App</div>
+          <div className={styles.form_header}>Popcorn Buzz</div>
           <p className={styles.form_header_two}>Create your new account</p>
           <form>
             <input
@@ -257,7 +257,7 @@ const Register = () => {
               />
 
               <p className={styles.form_isAgreed_text}>
-                Share my Registration data with Superapp
+                Share my Registration data with Popcorn Buzz
               </p>
             </div>
 
@@ -270,14 +270,14 @@ const Register = () => {
           </form>
           <div className={styles.footer}>
             <p className={styles.term_condition}>
-              By clicking on Sign Up. you agree to Superapp{" "}
+              By clicking on Sign Up. you agree to Popcorn Buzz{" "}
               <span className={styles.tandc_text} onClick={handleTandC}>
                 Terms and Conditions of Use
               </span>
             </p>
             <p className={styles.term_condition}>
-              To learn more about how Superapp collects, uses, shares and
-              protects your personal data please head Superapp{" "}
+              To learn more about how Popcorn Buzz collects, uses, shares and
+              protects your personal data please head Popcorn Buzz{" "}
               <span className={styles.tandc_text} onClick={handleTandC}>
                 Privacy Policy
               </span>

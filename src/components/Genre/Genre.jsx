@@ -92,7 +92,7 @@ const handleSubmit = () => {
   return (
     <div className={styles.container} > 
       <div className={styles.sub_container}>
-         <h1 className={styles.logo_text}>Super App</h1>
+         <h1 className={styles.logo_text}>Popcorn Buzz</h1>
          <h3 className={styles.sub_heading}>Choose your entertainment category</h3>
          {lengthError && <p className={styles.error} style={{color: "red", marginLeft: "-4rem"} }><img src={Required} alt='none' style={{height: "1.5rem", width: "1.7rem", marginRight: "0.5rem"}}/>Minimum 3 Category Required !</p>  }
             <div className={styles.category_container}>
