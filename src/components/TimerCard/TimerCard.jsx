@@ -48,6 +48,9 @@ const TimerCard = () => {
 
   function onComlete () {
       bell.play()
+      setHours(0)
+      setSeconds(0)
+      setMinutes(0)
   }
   useEffect(() => {
      const secondCount = (seconds + minutes * 60 + hours * 60 * 60);
