@@ -1,9 +1,9 @@
-<video controls>
-  <source src='/public/assets/video/popcorn-buzz.mp4' type='video/mp4'>
-</video>
+
+https://github.com/Tanish-Mishra/Popcorn-Buzz/assets/107027726/ec5ff9c5-cc8f-466b-9af6-5b90a38a99b1
+
 # Popcorn Buzz Movie Recommendation App
 
-Welcome to Popcorn Buzz, your personalized movie recommendations app that caters to your unique taste in films. Discover and enjoy tailored movie suggestions based on your preferences, and explore additional features to enhance your movie-watching experience.
+Welcome to Popcorn Buzzz, your personalized movie recommendations app that caters to your unique taste in films. Discover and enjoy tailored movie suggestions based on your preferences, and explore additional features to enhance your movie-watching experience.
 
 ## Visit Now
 Explore personalized movie recommendations on [Popcorn Buzz](https://popcorn-buzz.netlify.app).
