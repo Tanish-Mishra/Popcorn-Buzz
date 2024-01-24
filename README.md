@@ -1,3 +1,6 @@
+<video controls>
+  <source src='/public/assets/video/popcorn-buzz.mp4' type='video/mp4'>
+</video>
 # Popcorn Buzz Movie Recommendation App
 
 Welcome to Popcorn Buzz, your personalized movie recommendations app that caters to your unique taste in films. Discover and enjoy tailored movie suggestions based on your preferences, and explore additional features to enhance your movie-watching experience.
